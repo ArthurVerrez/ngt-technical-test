@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   public items: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
-    this.items = db.collection('/test').valueChanges();
+    //this.items = db.collection('/test_correlations').valueChanges();
 }
 
   ngOnInit() {
