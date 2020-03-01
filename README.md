@@ -50,12 +50,16 @@ The dataset had the following schema, I also included my interpretation of the c
 
 The following checks were made:
 
--For each valuation date **NAV_Per_Share=Total_Net_Assets/Nb_Shares_Outstanding** (with a 2% error margin)
+- There is only one row per instrument and NAV_Per_Share
+- For each valuation date **NAV_Per_Share=Total_Net_Assets/Nb_Shares_Outstanding** (with a 2% error margin)
+
+We also calculated the correlation for each instruments between each other, here is the pearson correlation matrix of the different instruments:
+![image](others/img/pearson_corr_instruments.png)
 
 ## Task B: Front-end
 
 To gain a bit of time for this part, I have used an already existing open source Angular 8 template that I have simplified and adapted to my own usage.
-The template used is [black-dashboard-angular](https://github.com/creativetimofficial/black-dashboard-angular).
+The template used is [black-dashboard-angular](https://github.com/creativetimofficial/black-dashboard-angular) (under MIT License).
 
 
 INCLUDE SCREENSHOTS
