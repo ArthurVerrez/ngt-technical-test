@@ -10,7 +10,7 @@ The actual files answering the questions can be found in the folder *case_study*
 - **Task B: Front-end** can be found in the folder *case_study/frontend*.
 - **Task C: Cloud Functions** can be found in the folder *case_study/cloud*.
 
-Some others folders can also be found in this repository:
+Some other folders can also be found in this repository:
 
 - *case_study/data* that contains the data used in the project, including the given csv file given with the test (*example_data.csv*).
 - *case_study/identification* that contains the files for identification with the Google Cloud Plateform.
@@ -23,7 +23,7 @@ This part was answered using a *jupyter notebook*  that allowed for an easier da
 The *jupyter notebook* already contains step by step explanation on the process.
 
 *Python 3.7* and the library *pandas* were used.
-The dataset had the following schema, I also included my interpretation of the column.
+The dataset had the following schema, I also included my interpretation of the columns.
 
 |Column name|Interpretation|
 |--|--|
@@ -50,8 +50,9 @@ The dataset had the following schema, I also included my interpretation of the c
 
 The following checks were made:
 
-- There is only one row per instrument and NAV_Per_Share
-- For each valuation date **NAV_Per_Share=Total_Net_Assets/Nb_Shares_Outstanding** (with a 2% error margin)
+- There is only one row per instrument and valuation date.
+- For each valuation date **NAV_Per_Share=Total_Net_Assets/Nb_Shares_Outstanding**
+- - For each valuation date **Amount_Subscribed / Nb_Shares_Subscribed=Amount_Redeemed / Nb_Shares_Redeemed**
 
 We also calculated the correlation for each instruments between each other, here is the pearson correlation matrix of the different instruments:
 
@@ -63,6 +64,7 @@ To gain a bit of time for this part, I have used an already existing open source
 The template used is [black-dashboard-angular](https://github.com/creativetimofficial/black-dashboard-angular) (under MIT License).
 
 The front-end after integration of the firebase data looks like this:
+
 <img src="others/img/webapp.png" alt="Webapp" height="500px">
 
 ## Task C: Cloud functions
@@ -70,9 +72,13 @@ The front-end after integration of the firebase data looks like this:
 This last task is so that the code is online but it can also be found in the folder *case_study/cloud* with a *requirements.txt* and a *aggregate_subscribed_redeemed_checks.py* file which is the name of the function on the Google Cloud Plateform.
 
 Here's the function:
+
 <img src="others/img/cloud_function.png" alt="Cloud function" height="500px">
 
 The trigger was set as asked but sadly it does not seem to work when the collection is being created even though it seems as if the trigger was set correctly:
+
 <img src="others/img/cloud_function_trigger.png" alt="Cloud function trigger" height="500px">
 
-Maybe the problem is that the functionality is still in bêta or maybe I did not choose the right trigger.
+Maybe the problem is that the functionality is still in bêta or maybe I did not choose the right trigger.*
+On the other hand, the cloud function does work on testing.
+
