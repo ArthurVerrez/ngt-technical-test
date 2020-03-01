@@ -73,11 +73,11 @@ This last task is so that the code is online but it can also be found in the fol
 
 Here's the function:
 
-<img src="others/img/cloud_function.png" alt="Cloud function" height="200px">
+<img src="others/img/cloud_function.png" alt="Cloud function" height="400px">
 
 The trigger was set as asked but sadly it does not seem to work when the collection is being created even though it seems as if the trigger was set correctly:
 
-<img src="others/img/cloud_function_trigger.png" alt="Cloud function trigger" height="200px">
+<img src="others/img/cloud_function_trigger.png" alt="Cloud function trigger" height="400px">
 
 Maybe the problem is that the functionality is still in bêta or maybe I did not choose the right trigger.*
 On the other hand, the cloud function does work on testing.
