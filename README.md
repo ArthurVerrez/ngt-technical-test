@@ -1,17 +1,19 @@
 # Next Gate Tech Technical Test
+
 ## Introduction
-This repository was made as part of my application to the company Next Gate Tech. It includes my take on the technical test that was sent to me on February 28th, 2020.
+
+This repository was made as part of my application to the company [Next Gate Tech](https://nextgatetech.com/). It includes my take on the technical test that was sent to me on February 28th, 2020.
 The test's description can be found under *others/NGT - Test.pdf*
 The actual files answering the questions can be found in the folder *case_study*.
 
- - **Task A: Back-end** can be found in the folder *case_study/backend*.
- - **Task B: Front-end** can be found in the folder *case_study/frontend*.
- - **Task C: Cloud Functions** can be found in the folder *case_study/cloud*.
+- **Task A: Back-end** can be found in the folder *case_study/backend*.
+- **Task B: Front-end** can be found in the folder *case_study/frontend*.
+- **Task C: Cloud Functions** can be found in the folder *case_study/cloud*.
 
 Some others folders can also be found in this repository:
 
- - *case_study/data* that contains the data used in the project, including the given csv file given with the test (*example_data.csv*).
- - *case_study/identification* that contains the files for identification with the Google Cloud Plateform.
+- *case_study/data* that contains the data used in the project, including the given csv file given with the test (*example_data.csv*).
+- *case_study/identification* that contains the files for identification with the Google Cloud Plateform.
 - *others* contains different files that are not relevant to the project but that I included for more transparency on my take on this test.
 
 ## Task A: Back-end
@@ -20,7 +22,7 @@ This part was answered using a *jupyter notebook*  that allowed for an easier da
 
 The *jupyter notebook* already contains step by step explanation on the process.
 
-*Python 3.7* and the module *pandas* were used.
+*Python 3.7* and the library *pandas* were used.
 The dataset had the following schema, I also included my interpretation of the column.
 
 |Column name|Interpretation|
@@ -38,16 +40,23 @@ The dataset had the following schema, I also included my interpretation of the c
 |Amount_Subscribed|Nb_Shares_Subscribed x Net_Asset_Value|
 |Nb_Shares_Redeemed|Number of shares redeemed for this instrument on *Valuation_Date*'s date|
 |Amount_Redeemed|Nb_Shares_Redeemedx Net_Asset_Value|
-|Subfund_Long_Name||
+|Subfund_Long_Name|**Always NaN**|
 |Dividend_Per_Share|Dividend that the fund should receive per share|
 |Dividend_Payment_Date|Date at which the dividends should be paid|
-|Dividend_PCCY|**Not understood**|
+|Dividend_PCCY|**Always 0**|
 |Dividend_Payment_CCY|Currency code of the dividend payment|
 |Dividend_Subfund_CCY|Currency code of the dividend subfund|
 |Total_Net_Assets|Total net assets of this instrument|
 
+The following checks were made:
+
+-For each valuation date **NAV_Per_Share=Total_Net_Assets/Nb_Shares_Outstanding** (with a 2% error margin)
 
 ## Task B: Front-end
+
+To gain a bit of time for this part, I have used an already existing open source Angular 8 template that I have simplified and adapted to my own usage.
+The template used is [black-dashboard-angular](https://github.com/creativetimofficial/black-dashboard-angular).
+
 
 INCLUDE SCREENSHOTS
 
