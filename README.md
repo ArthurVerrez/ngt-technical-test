@@ -56,7 +56,7 @@ The following checks were made:
 
 We also calculated the correlation for each instruments between each other, here is the pearson correlation matrix of the different instruments:
 
-<img src="others/img/pearson_corr_instruments.png" alt="Pearson Correlation" max-height="500px">
+<img src="others/img/pearson_corr_instruments.png" alt="Pearson Correlation" height="500px">
 
 ## Task B: Front-end
 
@@ -65,7 +65,7 @@ The template used is [black-dashboard-angular](https://github.com/creativetimoff
 
 The front-end after integration of the firebase data looks like this:
 
-<img src="others/img/webapp.png" alt="Webapp" max-height="500px">
+<img src="others/img/webapp.png" alt="Webapp" height="400px">
 
 ## Task C: Cloud functions
 
@@ -73,11 +73,11 @@ This last task is so that the code is online but it can also be found in the fol
 
 Here's the function:
 
-<img src="others/img/cloud_function.png" alt="Cloud function" max-height="500px">
+<img src="others/img/cloud_function.png" alt="Cloud function" height="200px">
 
 The trigger was set as asked but sadly it does not seem to work when the collection is being created even though it seems as if the trigger was set correctly:
 
-<img src="others/img/cloud_function_trigger.png" alt="Cloud function trigger" max-height="500px">
+<img src="others/img/cloud_function_trigger.png" alt="Cloud function trigger" height="200px">
 
 Maybe the problem is that the functionality is still in bêta or maybe I did not choose the right trigger.*
 On the other hand, the cloud function does work on testing.
