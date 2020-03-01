@@ -54,6 +54,7 @@ The following checks were made:
 - For each valuation date **NAV_Per_Share=Total_Net_Assets/Nb_Shares_Outstanding** (with a 2% error margin)
 
 We also calculated the correlation for each instruments between each other, here is the pearson correlation matrix of the different instruments:
+
 <img src="others/img/pearson_corr_instruments.png" alt="Pearson Correlation" width="500px" height="500px">
 
 ## Task B: Front-end
