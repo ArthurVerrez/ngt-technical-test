@@ -14,13 +14,6 @@ export const ROUTES: RouteInfo[] = [
     rtlTitle: "لوحة القيادة",
     icon: "icon-chart-pie-36",
     class: ""
-  },
-  {
-    path: "/icons",
-    title: "Icons",
-    rtlTitle: "الرموز",
-    icon: "icon-atom",
-    class: ""
   }
 ];
 

@@ -6,7 +6,6 @@ import { FormsModule } from "@angular/forms";
 
 import { AdminLayoutRoutes } from "./admin-layout.routing";
 import { DashboardComponent } from "../../pages/dashboard/dashboard.component";
-import { IconsComponent } from "../../pages/icons/icons.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -19,8 +18,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     NgbModule,
   ],
   declarations: [
-    DashboardComponent,
-    IconsComponent
+    DashboardComponent
   ]
 })
 export class AdminLayoutModule {}

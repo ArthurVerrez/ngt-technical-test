@@ -62,7 +62,17 @@ We also calculated the correlation for each instruments between each other, here
 To gain a bit of time for this part, I have used an already existing open source Angular 8 template that I have simplified and adapted to my own usage.
 The template used is [black-dashboard-angular](https://github.com/creativetimofficial/black-dashboard-angular) (under MIT License).
 
-
-INCLUDE SCREENSHOTS
+The front-end after integration of the firebase data looks like this:
+<img src="others/img/webapp.png" alt="Webapp" width="500px" height="500px">
 
 ## Task C: Cloud functions
+
+This last task is so that the code is online but it can also be found in the folder *case_study/cloud* with a *requirements.txt* and a *aggregate_subscribed_redeemed_checks.py* file which is the name of the function on the Google Cloud Plateform.
+
+Here's the function:
+<img src="others/img/cloud_function.png" alt="Webapp" width="500px" height="500px">
+
+The trigger was set as asked but sadly it does not seem to work when the collection is being created even though it seems as if the trigger was set correctly:
+<img src="others/img/cloud_function_trigger.png" alt="Webapp" width="500px" height="500px">
+
+Maybe the problem is that the functionality is still in bêta or maybe I did not choose the right trigger.

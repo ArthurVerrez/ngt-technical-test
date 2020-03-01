@@ -5,10 +5,10 @@
         <div class=" col-lg-12 col-md-12">
           <div class=" card">
             <div class=" card-header">
-              <h4 class=" card-title">Correlation data coming from Firestore - Calculated in Python</h4>
+              <h4 class=" card-title">Correlation data (coming from Firestore, calculated in Python)</h4>
             </div>
             <div class=" card-body">
-              <div class=" table-responsive">
+              <div class=" table-responsive" style="max-height:500px; overflow:scroll; overflow-x:auto;">
                 <table class=" table tablesorter" id="">
                   <thead class=" text-primary">
                     <tr>
@@ -18,7 +18,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let item of items | async">
+                    <tr *ngFor="let item of correlations | async">
                       <td>{{ item.i1 }}</td>
                       <td>{{ item.i2 }}</td>
                       <td>{{ item.pearson_corr }}</td>
@@ -26,6 +26,71 @@
                   </tbody>
                 </table>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class=" col-lg-12 col-md-12">
+
+          <div class=" card">
+            <div class=" card-header">
+              <h4 class=" card-title">Daily data checks: is the redeemed NAV per share the same as the subscribed NAV per share (coming from Firestore, calculated in Python)</h4>
+            </div>
+            <div class=" card-body">
+              <div class=" table-responsive" style="max-height:500px; overflow:scroll; overflow-x:auto;">
+                <table class=" table tablesorter" id="">
+                  <thead class=" text-primary">
+                    <tr>
+                      <th>Valuation Date</th>
+                      <th>Subfund Code</th>
+                      <th>Share Class Code</th>
+                      <th class=" text-center">Check</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of redeemed_subscribed_check | async">
+                      <td>{{ item.Valuation_Date }}</td>
+                      <td>{{ item.Subfund_Code }}</td>
+                      <td>{{ item.Share_Class_Code }}</td>
+                      <td>{{ item.NAV_Per_Share_Redeemed_Subscribed_Check }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class=" card" >
+            <div class=" card-header">
+              <h4 class=" card-title">Monthly data checks: is the redeemed NAV per share the same as the subscribed NAV per share (coming from Firestore, calculated in Cloud Function)</h4>
+            </div>
+            <div class=" card-body" >
+              <div class=" table-responsive" style="max-height:500px; overflow:scroll; overflow-x:auto;">
+                <table class=" table tablesorter" id="">
+                  <thead class=" text-primary">
+                    <tr>
+                      <th>Valuation Year</th>
+                      <th>Valuation Month</th>
+                      <th class=" text-center">Check</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of check_redeemed_subscribed_aggregated | async">
+                      <td>{{ item.Valuation_Year }}</td>
+                      <td>{{ item.Valuation_Month }}</td>
+                      <td>{{ item.NAV_Per_Share_Redeemed_Subscribed_Check }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class=" card">
+            <div class=" card-header">
+              <h4 class=" card-title">Overall check of the duplicates in the data (coming from Firestore, calculated in Python)</h4>
+            </div>
+            <div *ngFor="let item of check_no_duplicates | async" class=" card-body">
+              <p>State of the duplicates in the data: {{ item.check_no_duplicates }}</p>
             </div>
           </div>
       </div>

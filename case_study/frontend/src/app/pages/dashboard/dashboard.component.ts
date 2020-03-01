@@ -17,10 +17,18 @@ export class DashboardComponent implements OnInit {
   public clicked1: boolean = false;
   public clicked2: boolean = false;
 
-  public items: Observable<any[]>;
+  public correlations: Observable<any[]>;
+  public redeemed_subscribed_check: Observable<any[]>;
+  public check_no_duplicates: Observable<any[]>;
+  public check_redeemed_subscribed_aggregated: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
-    //this.items = db.collection('/test_correlations').valueChanges();
+    this.correlations = db.collection('/correlations').valueChanges();
+    this.redeemed_subscribed_check = db.collection('/check_redeemed_subscribed').valueChanges();
+    this.check_no_duplicates = db.collection('/check_no_duplicates').valueChanges();
+    this.check_redeemed_subscribed_aggregated = db.collection('/check_redeemed_subscribed_aggregated').valueChanges();
+
+
 }
 
   ngOnInit() {
