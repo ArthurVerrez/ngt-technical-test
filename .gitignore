@@ -1,4 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+identification/ngt-technical-test-firebase-adminsdk.json
+.ipynb_checkpoints/
 
 # compiled output
 /dist
