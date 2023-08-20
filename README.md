@@ -16,6 +16,9 @@ Some other folders can also be found in this repository:
 - *case_study/identification* that contains the files for identification with the Google Cloud Plateform.
 - *others* contains different files that are not relevant to the project but that I included for more transparency on my take on this test.
 
+## Copyright
+All rights of the technical test belong to [Next Gate Tech S.A.](https://nextgatetech.com/).
+
 ## Task A: Back-end
 
 This part was answered using a *jupyter notebook*  that allowed for an easier data exploring, comprehension and communication with *Firestore*.
